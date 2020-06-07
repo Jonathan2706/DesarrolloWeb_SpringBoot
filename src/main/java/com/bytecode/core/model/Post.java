@@ -1,19 +1,27 @@
 package com.bytecode.core.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Post {
+
 	private int id;
+	private String titulo;
 	private String descripcion;
-	private String urlImg;
-	 private Date fecha;
-	 private String titulo;
-	 
+	private String urlImg = "http://localhost/img/post.jpg";
+	private Date fecha = new Date();
+	
+	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 	public String getDescripcion() {
 		return descripcion;
@@ -33,23 +41,20 @@ public class Post {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
-	public String getTitulo() {
-		return titulo;
-	}
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-	public Post(int id, String descripcion, String urlImg, Date fecha, String titulo) {
-		
+	
+	
+	public Post(int id, String titulo, String descripcion, String urlImg, Date fecha) {
+
 		this.id = id;
+		this.titulo = titulo;
 		this.descripcion = descripcion;
 		this.urlImg = urlImg;
 		this.fecha = fecha;
-		this.titulo = titulo;
 	}
 	public Post() {
-		
-	}
 
-	 
+	}
+	
+	
+	
 }
